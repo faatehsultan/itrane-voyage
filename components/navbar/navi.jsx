@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import React, { useState } from 'react';
+import Link from "next/link"
 
 export default function Navi () {
 
@@ -51,9 +52,9 @@ export default function Navi () {
                           navigation.map((item, idx) => {
                               return (
                                 <li key={idx} className="text-gray-700 hover:rounded-md hover:shadow-md hover:text-orange-600">
-                                    <a href={item.path}>
+                                    <Link href={item.path}>
                                         { item.title }
-                                    </a>
+                                    </Link>
                                 </li>
                               )
                           })
