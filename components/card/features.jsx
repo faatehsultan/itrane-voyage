@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Features = () => {
   return (
@@ -65,7 +66,9 @@ const Features = () => {
         </div>
       </div>
     </div>
+    <Link href='/' passHref>
     <button className="flex mx-auto mt-16 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg">Buy Ticket</button>
+    </Link>
   </div>
 </section>
     </div>

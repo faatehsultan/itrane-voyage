@@ -5,7 +5,13 @@ module.exports = {
    
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
+      'serif': ['ui-serif'],
+      'mono': ['SFMono-Regular'],
+      'display': ['Oswald'],
+      'body': ['Open Sans'],
+    }
   },
   plugins: [
    

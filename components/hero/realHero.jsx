@@ -1,5 +1,6 @@
 import React from 'react'
 import Ticketbuy from './ticketbuy';
+import Link from "next/link"
 
 var curr = new Date();
 curr.setDate(curr.getDate() + 3);
@@ -69,7 +70,11 @@ export const Testi = () => {
             </div>
 
             <div className="flex justify-center mt-6 z-10">
-                <button className="px-4 py-2 mb-3 mt-3 ">Buy Ticket</button>
+            <Link href='/buyticket' passHref>
+                <button className="py-3 px-4 mb-3 mt-3 text-white">
+                    Buy Ticket
+                </button>
+                </Link>
             </div>
         </div>
     </section>

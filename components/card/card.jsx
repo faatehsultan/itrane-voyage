@@ -2,19 +2,19 @@ import React from 'react'
 
 const Card = () => {
   return (
-    <div className="ml-12 sm:pl-12">
+    <div className="">
         <section className="text-gray-600 body-font">
   <div className="mb-15 mx-auto md:items-center flex flex-wrap">
     <div className="px-20 rounded-lg overflow-hidden">
     </div>
-    <div className="flex flex-col flex-wrap  -mb-10 lg:w-4/5 lg:pl-12 lg:text-left text-center">
-      <div className="flex flex-col mb-10 lg:items-start items-center">
+    <div className="flex flex-col flex-wrap  mb-10 lg:w-4/5  lg:text-left text-center">
+      <div className="flex flex-col mb-10 lg:items-start justify-center items-center">
         <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-orange-100 text-orange-500 mb-5">
           <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
             <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
           </svg>
         </div>
-        <div className="flex-grow">
+        <div className="flex-grow ">
           <h2 className="text-gray-900 text-2xl title-font font-medium mb-3">Choose Your Pick up Point and Destination</h2>
           <p className="leading-relaxed text-base">You can travel from one of our ten agencies in multiple Moroccan cities, or you can travel from any bus station in Morocco.</p>
           

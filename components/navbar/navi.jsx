@@ -52,7 +52,7 @@ export default function Navi () {
                           navigation.map((item, idx) => {
                               return (
                                 <li key={idx} className="text-gray-700 hover:rounded-md hover:shadow-md hover:text-orange-600">
-                                    <Link href={item.path}>
+                                    <Link href={item.path} passHref>
                                         { item.title }
                                     </Link>
                                 </li>
@@ -62,9 +62,11 @@ export default function Navi () {
                   </ul>
               </div>
               <div className="hidden md:inline-block">
-                <a href="javascript:void(0)" className="py-3 px-4 bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md shadow">
+                  <Link href='/buyticket' passHref>
+                <button className="py-3 px-4  text-white">
                     Buy Ticket
-                </a>
+                </button>
+                </Link>
               </div>
           </div>
       </nav>
