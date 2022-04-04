@@ -25,6 +25,7 @@
     "react-seat-picker": "^1.5.3",
     "react-slick": "^0.28.1",
     "react-tooltip": "^4.2.21",
+    "serverless-mysql": "^1.5.4",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"
   },
