@@ -34,25 +34,25 @@ export const Testi = () => {
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                Book Your Ticket with Itrane Online, Easy and Safely <br className="hidden md:block" />
+              Réservez votre billet avec Itrane en ligne, facilement et en toute sécurité <br className="hidden md:block" />
 
               </h2>
               <p className="max-w-xl mb-4 text-base text-white md:text-lg">
-                Book with Itrane for your next trip online with the lowest prices!
+              Réservez vos billets de bus au meilleur prix
               </p>
 
 
             </div>
             <div className="w-full max-w-2xl h- xl:px-8 xl:w-2/2">
               <section className="w-full  max-w-2xl h px-6 py-4 mx-auto bg-white rounded-xl shadow-md  hover:shadow-xl hover:shadow-orange-100">
-                <h2 className="text-3xl text-center title-font font-semibold text-transparent bg-clip-text m-6 bg-gradient-to-br from-yellow-500 to-red-600 ">Choose Your Ticket</h2>
+                <h2 className="text-3xl text-center title-font font-semibold text-transparent bg-clip-text m-6 bg-gradient-to-br from-yellow-500 to-red-600 ">Choisissez votre billet</h2>
 
 
 
                 <div className="mt-10 ">
                   <div className="items-center -mx-3 md:flex">
                     <div className="z-50 w-full mx-2">
-                      <label className="  block mb-2 text-sm font-medium text-gray-600 0:text-gray-200">Pick Up Point</label>
+                      <label className="  block mb-2 text-sm font-medium text-gray-600 0:text-gray-200">Point de départ</label>
 
                       <Ticketbuy setParData={setSrc} />
                     </div>
@@ -65,7 +65,7 @@ export const Testi = () => {
                   </div>
 
                   <div className="z-20 w-full mt-8">
-                    <label className="block mb-2 text-sm font-medium text-gray-600 0:text-gray-200">Departure Date</label>
+                    <label className="block mb-2 text-sm font-medium text-gray-600 0:text-gray-200">Date de départ</label>
                     <div className="">
 
                       <input className="relative w-full h-10 px-2 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden" type="date" id="start" defaultValue={date} name="trip-start" min="2022-01-01" max="2022-12-31"
@@ -85,7 +85,7 @@ export const Testi = () => {
                         }
                       }}
                     >
-                      Buy Ticket
+                     Réserver votre billet
                     </button>
                   </div>
                 </div>
