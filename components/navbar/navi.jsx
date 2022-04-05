@@ -10,7 +10,7 @@ export default function Navi () {
   // Replace javascript:void(0) path with your path
   const navigation = [
       { title: "Accueil", path: "/." },
-      { title: "A propos de", path: "/about" },
+      { title: "A propos", path: "/about" },
       { title: "FAQ", path: "/faq" },
       { title: "Contact", path: "/contact" }
   ]
