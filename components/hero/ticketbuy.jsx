@@ -11,8 +11,8 @@ const destinaitons = [
     { name: 'Fes' },
 ]
 
-export default function Ticketbuy({ setParData }) {
-    const [selected, setSelected] = useState(destinaitons[0])
+export default function Ticketbuy({ setParData, defaultIndex }) {
+    const [selected, setSelected] = useState(destinaitons[defaultIndex ? defaultIndex : 0])
     const [query, setQuery] = useState('')
 
     useEffect(() => {

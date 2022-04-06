@@ -54,13 +54,13 @@ export const Testi = () => {
                     <div className="z-50 w-full mx-2">
                       <label className="  block mb-2 text-sm font-medium text-gray-600 0:text-gray-200">Point de départ</label>
 
-                      <Ticketbuy setParData={setSrc} />
+                      <Ticketbuy setParData={setSrc} defaultIndex={0} />
                     </div>
 
                     <div className="z-40 w-full mx-2 mt-4 md:mt-0">
                       <label className="block mb-2 text-sm font-medium text-gray-600 0:text-gray-200">Destination</label>
 
-                      <Ticketbuy setParData={setDest} />
+                      <Ticketbuy setParData={setDest} defaultIndex={4} />
                     </div>
                   </div>
 
@@ -69,10 +69,7 @@ export const Testi = () => {
                     <div className="">
 
                       <input className="relative w-full h-10 px-2 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 sm:text-sm overflow-hidden" type="date" id="start" defaultValue={date} name="trip-start" min="2022-01-01" max="2022-12-31"
-                        onChange={(e) => {
-                          setDeptDate(e.target.value)
-                        }}
-                      />
+                        value={deptData} onChange={(e) => setDeptDate(e.target.value)} />
                     </div>
 
                   </div>
