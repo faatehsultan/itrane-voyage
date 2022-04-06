@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Userinfo = () => {
+const Userinfo = ({ handleSubmit }) => {
+  const [user, setUser] = useState({
+    name: '',
+    phone: '',
+    address1: '',
+    address2: '',
+    city: '',
+    state: '',
+    zip: '',
+    country: '',
+    deliveryInfo: ''
+  });
+
   return (
     <div>
-        <div className="w-full md:w-96 md:max-w-full mx-auto">
-  <div className="p-6 border border-gray-300 sm:rounded-md">
-    <form
-      method="POST"
-      action="https://herotofu.com/start"
-      encType="multipart/form-data"
-    >
-      <label className="block mb-6">
-        <span className="text-gray-700">Your name</span>
-        <input
-          name="name"
-          type="text"
-          className="
+      <div className="w-full md:w-96 md:max-w-full mx-auto">
+        <div className="p-6 border border-gray-300 sm:rounded-md">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(user);
+            }}
+          >
+            <label className="block mb-6">
+              <span className="text-gray-700">Your name</span>
+              <input
+                name="name"
+                type="text"
+                className="
             block
             w-full
             mt-1
@@ -27,15 +40,17 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          placeholder="Joe Bloggs"
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">Address line 1</span>
-        <input
-          name="address1"
-          type="text"
-          className="
+                placeholder="Joe Bloggs"
+                value={user.name}
+                onChange={e => setUser({ ...user, name: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Address line 1</span>
+              <input
+                name="address1"
+                type="text"
+                className="
             block
             w-full
             mt-1
@@ -47,15 +62,17 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          placeholder=""
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">Address line 2</span>
-        <input
-          name="address2"
-          type="text"
-          className="
+                placeholder=""
+                value={user.address1}
+                onChange={e => setUser({ ...user, address1: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Address line 2</span>
+              <input
+                name="address2"
+                type="text"
+                className="
             block
             w-full
             mt-1
@@ -67,15 +84,17 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-100
           "
-          placeholder=""
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">City</span>
-        <input
-          name="city"
-          type="text"
-          className="
+                placeholder=""
+                value={user.address2}
+                onChange={e => setUser({ ...user, address2: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">City</span>
+              <input
+                name="city"
+                type="text"
+                className="
             block
             w-full
             mt-2
@@ -89,15 +108,17 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          placeholder=""
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">State/Province</span>
-        <input
-          name="state"
-          type="text"
-          className="
+                placeholder=""
+                value={user.city}
+                onChange={e => setUser({ ...user, city: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">State/Province</span>
+              <input
+                name="state"
+                type="text"
+                className="
             block
             w-full
             mt-1
@@ -109,15 +130,17 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          placeholder=""
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">Zip/Postal code</span>
-        <input
-          name="zip"
-          type="text"
-          className="
+                placeholder=""
+                value={user.state}
+                onChange={e => setUser({ ...user, state: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Zip/Postal code</span>
+              <input
+                name="zip"
+                type="text"
+                className="
             block
             w-full
             mt-1
@@ -129,15 +152,17 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          placeholder=""
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">Country</span>
-        <input
-          name="country"
-          type="text"
-          className="
+                placeholder=""
+                value={user.zip}
+                onChange={e => setUser({ ...user, zip: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Country</span>
+              <input
+                name="country"
+                type="text"
+                className="
             block
             w-full
             mt-1
@@ -149,15 +174,17 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          placeholder=""
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">Telephone</span>
-        <input
-          name="telephone"
-          type="text"
-          className="
+                placeholder=""
+                value={user.country}
+                onChange={e => setUser({ ...user, country: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Telephone</span>
+              <input
+                name="telephone"
+                type="text"
+                className="
             block
             w-full
             mt-1
@@ -169,14 +196,16 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          placeholder=""
-        />
-      </label>
-      <label className="block mb-6">
-        <span className="text-gray-700">Delivery information</span>
-        <textarea
-          name="message"
-          className="
+                placeholder=""
+                value={user.phone}
+                onChange={e => setUser({ ...user, phone: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Delivery information</span>
+              <textarea
+                name="message"
+                className="
             block
             w-full
             mt-1
@@ -188,22 +217,24 @@ const Userinfo = () => {
             focus:ring-red-200
             focus:ring-opacity-50
           "
-          rows="3"
-          placeholder="floor/door lock code/etc."
-        ></textarea>
-      </label>
-      <div className="mb-6  flex items-center justify-center">
-        <button
-         className="w-1/3"
-          
-        >
-          Save
-        </button>
+                rows="3"
+                placeholder="floor/door lock code/etc."
+                value={user.deliveryInfo}
+                onChange={e => setUser({ ...user, deliveryInfo: e.target.value })}
+              ></textarea>
+            </label>
+            <div className="mb-6  flex items-center justify-center">
+              <button
+                className="w-1/3"
+
+              >
+                Save
+              </button>
+            </div>
+
+          </form>
+        </div>
       </div>
-     
-    </form>
-  </div>
-</div>
 
     </div>
   )
