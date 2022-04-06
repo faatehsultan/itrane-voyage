@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router';
 
-const Userinfo = ({ handleSubmit }) => {
+const Userinfo = () => {
+  const router = useRouter();
+
   const [user, setUser] = useState({
     name: '',
+    email: '',
     phone: '',
     address1: '',
     address2: '',
@@ -20,7 +24,8 @@ const Userinfo = ({ handleSubmit }) => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              handleSubmit(user);
+
+              router.push(`/payment?schedule_id=${router.query.schedule_id}&selectedSeats=${router.query.selectedSeats}&userInfoObj=${JSON.stringify(user)}`);
             }}
           >
             <label className="block mb-6">
@@ -43,6 +48,28 @@ const Userinfo = ({ handleSubmit }) => {
                 placeholder="Joe Bloggs"
                 value={user.name}
                 onChange={e => setUser({ ...user, name: e.target.value })}
+              />
+            </label>
+            <label className="block mb-6">
+              <span className="text-gray-700">Your email</span>
+              <input
+                name="name"
+                type="email"
+                className="
+            block
+            w-full
+            mt-1
+            border-gray-300
+            rounded-md
+            shadow-md
+            focus:border-red-300
+            focus:ring
+            focus:ring-red-200
+            focus:ring-opacity-50
+          "
+                placeholder="john@example.com"
+                value={user.email}
+                onChange={e => setUser({ ...user, email: e.target.value })}
               />
             </label>
             <label className="block mb-6">
@@ -224,12 +251,11 @@ const Userinfo = ({ handleSubmit }) => {
               ></textarea>
             </label>
             <div className="mb-6  flex items-center justify-center">
-              <button
-                className="w-1/3"
-
-              >
-                Save
-              </button>
+              <input
+                type="submit"
+                className="w-1/3 bg-red-500 text-white rounded-md p-2 focus:bg-red-600 hover:bg-red-600"
+                value={"Continue"}
+              />
             </div>
 
           </form>

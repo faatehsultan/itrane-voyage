@@ -4,6 +4,7 @@ import Navbar from 'components/navbar/navi'
 import Footer from 'components/footer/footies'
 import Steps from 'components/ticket/steps'
 import { useRouter } from 'next/router'
+import TopTripBanner from 'components/toptripbanner'
 
 const Buyticket = () => {
   const router = useRouter()
@@ -28,6 +29,7 @@ const Buyticket = () => {
   return (
     <div>
       <Navbar />
+      <TopTripBanner srcProp={router.query.src} destProp={router.query.dest} />
       <Steps />
       {tickets && tickets.length > 0 && <Ticket ticketList={tickets} />}
 

@@ -3,8 +3,8 @@ import Seatpick from 'components/seat/seatpick'
 import Navi from 'components/navbar/navi'
 import Footies from 'components/footer/footies'
 import Steps from 'components/ticket/steps'
-import Userinfo from 'components/seat/userinfo'
 import { useRouter } from 'next/router'
+import TopTripBanner from 'components/toptripbanner'
 
 const Seats = () => {
   const router = useRouter();
@@ -24,29 +24,20 @@ const Seats = () => {
     }
   }, [router.query.schedule_id]);
 
-  const handleSubmit = async (userInfoObj) => {
-    console.log(userInfoObj)
-    console.log(selectedSeats)
-    // add validations here
-    let res = await fetch("/api/postBooking", {
-      method: "POST",
-      body: JSON.stringify({
-        userInfoObj,
-        selectedSeats
-      })
-    })
-    console.log(res)
-  }
-
   return (
     <div>
       <Navi />
+      <TopTripBanner />
       <Steps />
       {loading ?
         "Loading..." :
-        <div className='flex justify-center items-center gap-20 py-20'>
+        <div className='flex flex-col justify-center items-center gap-10 py-20'>
           <Seatpick seatsData={seatsData} selectedSeats={selectedSeats} setSelectedSeats={setSelectedSeats} />
-          <Userinfo handleSubmit={handleSubmit} />
+          <button
+            onClick={() => {
+              router.push(`/bookinginfo?schedule_id=${router.query.schedule_id}&selectedSeats=${selectedSeats.join(",")}`)
+            }}
+          >Continue</button>
         </div>}
       <Footies />
     </div>
