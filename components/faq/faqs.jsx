@@ -51,24 +51,24 @@ const Faqs = () => {
 
     const faqsList = [
         {
-            q: "How Can I Pay?",
-            a: " You can pay using multiple options like debit card, credit card, wallets, net-banking and even pay in person in one of our agencies."
+            q: "Comment puis-je payer?",
+            a: " Vous pouvez payer en utilisant plusieurs options comme la carte de débit, la carte de crédit, le net-banking et même payer en personne dans l'une de nos agences."
         },
         {
-            q: "Do I have to Register to Buy a Ticket",
-            a: "Itrane Voyage offers a unique flexibility in user registration. It is not required to register to buy tickets online. However, frequent passengers are encouraged to register with Itrane Voyage to benefit from Itrane Voyage like Itrane reward point etc."
+            q: "Dois-je m'inscrire pour acheter un billet ?",
+            a: "Itrane Voyage offre une flexibilité unique dans l'enregistrement des utilisateurs. Il n'est pas nécessaire de s'inscrire pour acheter des billets en ligne. Cependant, les voyageurs fréquents sont encouragés à s'inscrire sur Itrane Voyage afin de bénéficier des avantages d'Itrane Voyage tels que les points de récompense Itrane, etc."
         },
         {
-            q: "Is it safe to buy a ticket on ItraneVoyage.com?",
-            a: "Safety of the buying process is something we take very seriously; the merchants we work with for the processing of payments are experienced and known for their high security standards."
+            q: "Est-il sécurisé d'acheter un billet sur Itrane Voyage ?",
+            a: "La sécurité du processus d'achat est une chose que nous prenons très au sérieux ; les commerçants avec lesquels nous travaillons pour le traitement des paiements sont expérimentés et connus pour leurs normes de sécurité élevées."
         },
         {
-            q: "I've lost my ticket. What should I do now?",
-            a: "A copy of the ticket would have been sent to you by e-mail when you booked it. Please take a printout of that mail and produce it at the time of boarding. If you have not received the ticket e-mail, please call any of our call centers and our executive will re-send you a copy by mail."
+            q: "J'ai perdu mon billet. Que dois-je faire maintenant ?",
+            a: "Une copie du billet vous aurait été envoyée par e-mail lors de votre réservation. Veuillez prendre une impression de ce courrier et la présenter au moment de l'embarquement. Si vous n'avez pas reçu le billet par e-mail, veuillez appeler l'un de nos centres d'appels et notre responsable vous en enverra une copie par courrier."
         },
         {
-            q: "Can I cancel my ticket online?",
-            a: "Most of the tickets can be cancelled online. However, there are some tickets that can only be cancelled through our call center. However please note that the cancellation fee and cancellation period may differ for specific bus services. Please contact any of our executives for cancellation details on any specific service."
+            q: "Puis-je annuler mon billet en ligne ?",
+            a: "La plupart des billets peuvent être annulés en ligne. Cependant, certains billets ne peuvent être annulés que par l'intermédiaire de notre centre d'appels. Cependant, veuillez noter que les frais d'annulation et la période d'annulation peuvent différer pour des services de bus spécifiques. Veuillez contacter l'un de nos responsables pour obtenir des informations sur l'annulation d'un service spécifique."
         }
     ]
   

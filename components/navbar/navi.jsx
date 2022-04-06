@@ -9,8 +9,8 @@ export default function Navi () {
 
   // Replace javascript:void(0) path with your path
   const navigation = [
-      { title: "Home", path: "/." },
-      { title: "About", path: "/about" },
+      { title: "Accueil", path: "/." },
+      { title: "Qui sommes nous ?", path: "/about" },
       { title: "FAQ", path: "/faq" },
       { title: "Contact", path: "/contact" }
   ]
@@ -64,7 +64,7 @@ export default function Navi () {
               <div className="hidden md:inline-block">
                   <Link href='/buyticket' passHref>
                 <button className="py-3 px-4  text-white">
-                    Buy Ticket
+                Réserver votre billet
                 </button>
                 </Link>
               </div>

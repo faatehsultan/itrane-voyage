@@ -15,8 +15,8 @@ const Card = () => {
           </svg>
         </div>
         <div className="flex-grow ">
-          <h2 className="text-gray-900 text-2xl title-font font-medium mb-3">Choose Your Pick up Point and Destination</h2>
-          <p className="leading-relaxed text-base">You can travel from one of our ten agencies in multiple Moroccan cities, or you can travel from any bus station in Morocco.</p>
+          <h2 className="text-gray-900 text-2xl title-font font-medium mb-3">Choisissez votre point de départ et votre destination</h2>
+          <p className="leading-relaxed text-base">Vous pouvez voyager à partir de l&lsquo;une de nos dix agences dans plusieurs villes, ou vous pouvez voyager à partir de n&lsquo;importe quelle gare routière au Maroc.</p>
           
         </div>
       </div>
@@ -27,8 +27,8 @@ const Card = () => {
           </svg>
         </div>
         <div className="flex-grow">
-          <h2 className="text-gray-900 text-2xl title-font font-medium mb-3">Choose a Date for Your Trip</h2>
-          <p className="leading-relaxed text-base">After you select the pick up point and destination, you will have the choice between different times in your selected date. You can also choose the seats and number of passengers.  </p>
+          <h2 className="text-gray-900 text-2xl title-font font-medium mb-3">Choisissez une date pour votre voyagep</h2>
+          <p className="leading-relaxed text-base">Après avoir sélectionné le lieu de départ et la destination, vous aurez le choix entre plusieurs horaires à la date choisie. Vous pouvez également choisir les sièges et le nombre de passagers.  </p>
       
         </div>
       </div>
@@ -40,8 +40,8 @@ const Card = () => {
           </svg>
         </div>
         <div className="flex-grow">
-          <h2 className="text-gray-900 text-2xl title-font font-medium mb-3">Pay Online or in Our Agencies</h2>
-          <p className="leading-relaxed text-base">You can securly pay for your ticket online using Moroccan and internation credit cards, or you can pay one day before your trip in our agencies.</p>
+          <h2 className="text-gray-900 text-2xl title-font font-medium mb-3">Payer en ligne ou dans nos agences</h2>
+          <p className="leading-relaxed text-base">Vous pouvez payer votre billet en ligne en toute sécurité avec des cartes de crédit marocaines et internationales, ou vous pouvez payer un jour avant votre voyage dans nos agences.</p>
          
         </div>
       </div>

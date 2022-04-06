@@ -8,10 +8,10 @@ const Footies = () => {
   <div className="container px-5 mx-auto">
     <div className=" flex flex-wrap md:text-left text-center order-first">
       <div className="lg:w-1/4 md:w-1/2 w-full py-8 px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-l  mb-3">Useful Links</h2>
+        <h2 className="title-font font-medium text-gray-900 tracking-widest text-l  mb-3">Liens utiles</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-red-700">About </a>
+            <a className="text-gray-600 hover:text-red-700">Qui sommes nous ?</a>
           </li>
           <li>
             <a className="text-gray-600 hover:text-red-700">FAQ</a>
@@ -23,24 +23,24 @@ const Footies = () => {
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full py-8 px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-l mb-3">Policies</h2>
+        <h2 className="title-font font-medium text-gray-900 tracking-widest text-l mb-3">Politiques</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-red-700">Privacy Policy</a>
+            <a className="text-gray-600 hover:text-red-700">Politique de confidentialité</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-red-700">Terms and Conditions</a>
+            <a className="text-gray-600 hover:text-red-700">Termes et conditions</a>
           </li>
           <li>
             <a className="text-gray-600 hover:text-red-700">Ticket Policies</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-red-700">Refund Policy</a>
+            <a className="text-gray-600 hover:text-red-700">Politique de remboursement</a>
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 py-8 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-l mb-3">Contact Information</h2>
+        <h2 className="title-font font-medium text-gray-900 tracking-widest text-l mb-3">Informations de contact</h2>
         <nav className="list-none mb-10">
           <li>
             <a className="text-gray-600 hover:text-gray-800">Bd El Fida, Casablanca 20320</a>
@@ -55,7 +55,7 @@ const Footies = () => {
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 py-8 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Subscribe to Recieve Offers</h2>
+        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">S&lsquo;inscrire pour recevoir des offres</h2>
         <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
           <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
             <label htmlFor="footer-field" className="leading-7 text-sm text-gray-600">Email</label>

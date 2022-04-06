@@ -6,10 +6,12 @@ import Features from 'components/card/features'
 import Footies from 'components/footer/footies'
 import Testi from 'components/hero/realHero'
 import Testimo from 'components/testimonial/testimonial'
+import { useEffect, useState } from 'react'
 
 
 
 export default function Home() {
+  8
   return (
     <div>
       <Navi />
