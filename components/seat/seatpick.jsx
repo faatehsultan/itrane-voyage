@@ -42,7 +42,6 @@ export default function Seatpick({ seatsData, selectedSeats, setSelectedSeats })
           selectedByDefault
         />}
       </div>
-
     </div>
   )
 }
