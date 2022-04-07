@@ -33,12 +33,12 @@ const TicketTrip = () => {
 
       <div className="flex flex-col p-2">
         <p className="font-bold">18:25</p>
-        <p className="text-gray-500"><span className="font-bold">AGA</span> Massira Station</p>
+        <p className="text-gray-500"> Massira Station</p>
         <p className="text-gray-600 text-lg font-bold">Agadir</p>
       </div>
       <div className="flex flex-col flex-wrap p-2">
         <p className="font-bold">19:25</p>
-        <p className="text-gray-500"><span className="font-bold">CSB</span> Wlad Zyan Station</p>
+        <p className="text-gray-500"> Wlad Zyan Station</p>
         <p className="text-gray-600 text-lg font-bold">Casablanca</p>
       </div>
     </div>
