@@ -5,7 +5,6 @@ import Steps from 'components/ticket/steps'
 import TopTripBanner from 'components/toptripbanner'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import ReactPDF, { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import ReactToPrint from 'react-to-print'
 
 const BookingInfo = () => {
