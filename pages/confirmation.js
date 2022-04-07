@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import Navi from 'components/navbar/navi'
 import Footies from 'components/footer/footies'
 import Steps from 'components/ticket/steps'
-import Userinfo from 'components/seat/userinfo'
 import TopTripBanner from 'components/toptripbanner'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import ReactToPrint from 'react-to-print'
 
 const BookingInfo = () => {
   const [sch, setSch] = useState({});
   const router = useRouter();
   const [user] = useState(JSON.parse(router.query.userInfoObj))
+  const printingRef = useRef(null);
 
   const detailData = [
     ["Pickup", sch.src],
@@ -35,7 +36,7 @@ const BookingInfo = () => {
       <Navi />
       <TopTripBanner setScheduleForOuterUser={setSch} />
       <Steps />
-      <div className='flex flex-col justify-center items-center py-20'>
+      <div className='flex flex-col justify-center items-center py-20' ref={printingRef}>
         {/* create a table showing user details */}
         <div className='text-3xl'>Ticket Info</div>
         <br />
@@ -51,9 +52,16 @@ const BookingInfo = () => {
         </table>
         <br />
         <div className='text-2xl'>Thank you for ordering with us!</div>
-        <br />
-        <Link href="/"><a type='button' className='bg-red-500 p-4 rounded text-white'>Go To Home</a></Link>
       </div>
+      <div className="flex justify-center gap-10">
+        <Link href="/"><a type='button' className='bg-red-500 p-4 rounded text-white'>Go To Home</a></Link>
+        <ReactToPrint
+          trigger={() => <button className='bg-red-500 p-4 rounded text-white'>Save Ticket as PDF</button>}
+          content={() => printingRef.current}
+        />
+      </div>
+      <br />
+      <br />
       <Footies />
     </div>
   )
