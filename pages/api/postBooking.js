@@ -1,4 +1,5 @@
 import { queryDB } from './db'
+import nodemailer from 'nodemailer'
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -16,7 +17,57 @@ export default async function handler(req, res) {
         for (let i = 0; i < seats.length; i++) {
           let qRes2 = await queryDB(`INSERT INTO booking_seats(seat_no, booking_id) VALUES (${seats[i]}, ${qRes1.insertId});`);
         }
-        res.status(200).json("success");
+        
+        // now mail the ticket
+        var transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: '', // TODO: ADD YOUR EMAIL HERE
+            pass: '' // TODO: ADD YOUR PASSWORD HERE
+          }
+        });
+
+        let sch = (await queryDB(`SELECT * FROM schedule where id = ${schedule_id}`))[0];
+
+        console.log(sch)
+
+        var mailOptions = {
+          from: 'fs.extra000@gmail.com',
+          to: 'fs.extra000@gmail.com',
+          subject: 'Ticket Confirmation',
+          text: `
+          Name: ${user.name}
+          Email: ${user.email}
+          Address: ${user.address1} ${user.address2}
+          City: ${user.city}
+          State: ${user.state}
+          Zip: ${user.zip}
+          Country: ${user.country}
+          Phone: ${user.phone}
+          Delivery Info: ${user.deliveryInfo}
+          Payment Mode: ${body.paymentMode}
+          Seats: ${seats.join(', ')}          
+          Pickup": ${sch.src},
+          Destination": ${sch.dest},
+          Date": ${sch.dept_date},
+          Start Time": ${sch.start_time},
+          End Time": ${sch.end_time},
+          Start Station": ${sch.start_station},
+          End Station": ${sch.end_station},
+          Price": ${sch.price},
+          `
+        };
+
+        console.log(mailOptions)
+
+        transporter.sendMail(mailOptions, function (error, info) {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log('Email sent: ' + info.response);
+            res.status(200).json("success");
+          }
+        });
         return;
       } else {
         res.status(500).json("error occurred")

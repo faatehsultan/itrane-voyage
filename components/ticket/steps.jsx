@@ -7,8 +7,7 @@ const stepNoAndPath = {
   "/buyticket": 2,
   "/seats": 3,
   "/bookinginfo": 4,
-  "/payment": 5,
-  "/confirmation": 6
+  "/confirmation": 5
 }
 
 function Steps() {
@@ -23,7 +22,7 @@ function Steps() {
     <div className="pt-12">
       <div className="w-1/2 mx-auto">
         <ChevronDots
-          steps={["Search", "Trip", "Seat", "Booking Info", "Payment", "Confirmation"]}
+          steps={["Search", "Trip", "Seat", "Booking Info", "Confirmation"]}
           currentStep={currentStep}
         />
       </div>
