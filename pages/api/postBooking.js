@@ -20,9 +20,9 @@ export default async function handler(req, res) {
         
         // now mail the ticket
         var transporter = nodemailer.createTransport({
-          service: 'gmail',
+          service: 'outlook',
           auth: {
-            user: '', // TODO: ADD YOUR EMAIL HERE
+            user: '', // TODO: 
             pass: '' // TODO: ADD YOUR PASSWORD HERE
           }
         });
@@ -32,8 +32,8 @@ export default async function handler(req, res) {
         console.log(sch)
 
         var mailOptions = {
-          from: 'fs.extra000@gmail.com',
-          to: 'fs.extra000@gmail.com',
+          from: 'h.e.holland@outlook.com',
+          to: 'h.e.holland@outlook.com',
           subject: 'Ticket Confirmation',
           text: `
           Name: ${user.name}
