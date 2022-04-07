@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CarouselData } from "./carouselData";
+import { CarouselData } from "./carouseldata";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Swipe from "react-easy-swipe";
 //import Image from 'next/image'
