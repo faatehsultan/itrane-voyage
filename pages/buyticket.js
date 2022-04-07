@@ -15,7 +15,11 @@ const Buyticket = () => {
       fetch(`/api/getSchedule?src=${router.query.src}&dest=${router.query.dest}&dept_date=${router.query.dept_date}`)
         .then(res => res.json())
         .then(data => {
-          setTickets(data)
+          if (data.length > 0) {
+            setTickets(data)
+          } else {
+            router.push("/noresult")
+          }
         })
         .catch(err => {
           console.log(err)
