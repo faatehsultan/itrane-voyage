@@ -10,27 +10,27 @@ import TicketSummary from 'components/ticket/ticketSummary'
 const BookingInfo = () => {
   const [sch, setSch] = useState({});
   const router = useRouter();
-  const [user] = useState(JSON.parse(router.query.userInfoObj))
+  const [user] = useState(router && router?.query && router?.query?.userInfoObj ? JSON.parse(router?.query?.userInfoObj) : null)
   const printingRef = useRef(null);
 
   const detailData = {
-    "Pickup": sch.src,
-    "Destination": sch.dest,
-    "Date": sch.dept_date,
-    "Start Time": sch.start_time,
-    "End Time": sch.end_time,
-    "Start Station": sch.start_station,
-    "End Station": sch.end_station,
-    "Price": sch.price,
-    "Seats": router.query.selectedSeats,
-    "Name": user.name,
-    "Address": user.address1,
-    "City": user.city,
-    "Email": user.email,
-    "Telephone": user.phone,
-    "State": user.state,
-    "Zip": user.zip,
-    "Payment Mode": router.query.payment_mode === "card" ? "Credit Card" : "Cash",
+    "Pickup": sch?.src,
+    "Destination": sch?.dest,
+    "Date": sch?.dept_date,
+    "Start Time": sch?.start_time,
+    "End Time": sch?.end_time,
+    "Start Station": sch?.start_station,
+    "End Station": sch?.end_station,
+    "Price": sch?.price,
+    "Seats": router?.query?.selectedSeats,
+    "Name": user?.name,
+    "Address": user?.address1,
+    "City": user?.city,
+    "Email": user?.email,
+    "Telephone": user?.phone,
+    "State": user?.state,
+    "Zip": user?.zip,
+    "Payment Mode": router?.query?.payment_mode === "card" ? "Credit Card" : "Cash",
   }
 
   return (

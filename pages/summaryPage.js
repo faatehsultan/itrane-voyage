@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import Navi from 'components/navbar/navi'
-import Footies from 'components/footer/footies'
-import Steps from 'components/ticket/steps'
-import TicketSummary from 'components/ticket/ticketSummary'
-import Userinfo from 'components/seat/userinfo'
+// import Navi from 'components/navbar/navi'
+// import Footies from 'components/footer/footies'
+// import Steps from 'components/ticket/steps'
+// import TicketSummary from 'components/ticket/ticketSummary'
+// import Userinfo from 'components/seat/userinfo'
 
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+// import { useRouter } from 'next/router'
+// import Link from 'next/link'
 
 const Confirmation = () => {
 
   return (
     <div>
-      <Navi />
+      {/* <Navi />
       <Steps />
       <div className="py-24 mt-12 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
 
@@ -103,7 +103,7 @@ const Confirmation = () => {
           </div>
         </div>
       </div>
-      <Footies />
+      <Footies /> */}
     </div>
   )
 }

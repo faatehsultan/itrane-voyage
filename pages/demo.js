@@ -1,12 +1,12 @@
 import React from 'react'
-import PaymentForm from 'components/paymenttest/creditCard'
-import TicketTrip from 'components/ticket/ticketTrip'
+// import PaymentForm from 'components/paymenttest/creditCard'
+// import TicketTrip from 'components/ticket/ticketTrip'
 
 const demo = () => {
   return (
     <div>
-        <TicketTrip/>
-        <PaymentForm/>
+        {/* <TicketTrip/>
+        <PaymentForm/> */}
     </div>
   )
 }
