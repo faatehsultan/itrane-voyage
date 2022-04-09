@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Ticketbuy from './ticketbuy';
 import Link from "next/link"
 import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
 
 var curr = new Date();
 curr.setDate(curr.getDate() + 3);
@@ -32,25 +31,10 @@ export const Testi = () => {
           />
         </svg>
         <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <motion.div initial="hidden" animate="visible" variants={{
-  hidden: {
-    scale: .8,
-    opacity: 0
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      delay: .4
-    }
-  },
-}}>
           <div className="flex flex-col items-center justify-between xl:flex-row">
-            
-          
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-              Réservez votre billet avec Itrane facilement et en toute sécurité <br className="hidden md:block" />
+              Réservez votre billet avec Itrane en ligne, facilement et en toute sécurité <br className="hidden md:block" />
 
               </h2>
               <p className="max-w-xl mb-4 text-base text-white md:text-lg">
@@ -104,11 +88,8 @@ export const Testi = () => {
                 </div>
               </section>
             </div>
-           
           </div>
-          </motion.div>
         </div>
-        
       </div>
     </div>
   );

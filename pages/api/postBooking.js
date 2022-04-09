@@ -1,6 +1,5 @@
 import { queryDB } from './db'
 import nodemailer from 'nodemailer'
-require('dotenv').config()
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -19,12 +18,12 @@ export default async function handler(req, res) {
           let qRes2 = await queryDB(`INSERT INTO booking_seats(seat_no, booking_id) VALUES (${seats[i]}, ${qRes1.insertId});`);
         }
         
-        
+        // now mail the ticket
         var transporter = nodemailer.createTransport({
           service: 'outlook',
           auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PWD 
+            user: '', // TODO: 
+            pass: '' // TODO: ADD YOUR PASSWORD HERE
           }
         });
 

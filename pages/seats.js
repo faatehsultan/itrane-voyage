@@ -26,7 +26,7 @@ const Seats = () => {
 
   return (
     <div>
-     
+      <Navi />
       <TopTripBanner />
       <Steps />
       {loading ?
@@ -39,7 +39,7 @@ const Seats = () => {
             }}
           >Continue</button>
         </div>}
-      
+      <Footies />
     </div>
   )
 }

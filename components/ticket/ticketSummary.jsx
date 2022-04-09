@@ -6,8 +6,8 @@ const TicketSummary = ({ detailData }) => {
     <div>
 
       <div className="py-5">
-        <div className="max-w-full w-full border border-slate-400  bg-white flex flex-col rounded overflow-hidden shadow-lg">
-          <div className="flex flex-row items-baseline  flex-nowrap bg-slate-100 p-2">
+        <div className="max-w-full w-full   bg-white flex flex-col rounded overflow-hidden shadow-lg">
+          <div className="flex flex-row items-baseline flex-nowrap bg-slate-100 p-2">
 
             <h1 className="ml-2 uppercase font-bold text-gray-500">departure</h1>
             <p className="ml-2 font-normal text-gray-500">{new Date(detailData["Date"]).toString().slice(0, 15)}</p>

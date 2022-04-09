@@ -7,12 +7,12 @@ const Contact = () => {
   return (
     <div>
 
-        
+        <Navi/>
       
     <div className="m-12 py-12 pb-12">
         <ContactMap/>
     </div>
-        
+        <Footies/>
     </div>
   )
 }

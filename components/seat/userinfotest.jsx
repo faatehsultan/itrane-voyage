@@ -50,8 +50,8 @@ const Userinfotest = () => {
             <div
             >
               <htmlForm action="#" method="POST">
-                <div className="border border-orange-300 shadow overflow-hidden sm:rounded-md">
-                  <div className="px-4 py-5 bg-slate-100  sm:p-6">
+                <div className="shadow overflow-hidden sm:rounded-md">
+                  <div className="px-4 py-5 bg-slate-50 sm:p-6">
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700">First name</label>
@@ -116,7 +116,7 @@ const Userinfotest = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 py-3 mt-4 bg-gray-50 text-right sm:px-6">
+                  <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                     <PaymentComponent handleConfirmTicket={handleConfirmTicket} />
                   </div>
                 </div>
