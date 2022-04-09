@@ -19,7 +19,21 @@ export default function TrackBookings() {
   const [schedules, setSchedules] = useState([])
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  const handleDeleteSch = (id) => {
+    fetch(`/api/deleteSchedule`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: id
+    }).then(res => {
+      if (res.status === 200) {
+        reloadData();
+      }
+    })
+  }
+
+  const reloadData = () => {
     setLoading(true);
     fetch("/api/getAllSchedules")
       .then(res => res.json())
@@ -30,6 +44,10 @@ export default function TrackBookings() {
         console.log(err)
         setLoading(false);
       });
+  }
+
+  useEffect(() => {
+    reloadData();
   }, [])
 
   return (
@@ -58,7 +76,7 @@ export default function TrackBookings() {
                   <th scope="col" key={index}>{detail[0]}</th>
                 ))}
                 <th></th>
-                <th></th>
+                {/* <th></th> */}
               </tr>
             </thead>
             <tbody>
@@ -71,13 +89,13 @@ export default function TrackBookings() {
                   <td>
                     <div className='btn rounded-circle p-0' style={{ cursor: "pointer" }}
                       onClick={() => {
-                        // handle here
+                        handleDeleteSch(schedule.id)
                       }}
                     >
                       <i title='delete' className="bi bi-trash text-danger fs-5"></i>
                     </div>
                   </td>
-                  <td>
+                  {/* <td>
                     <div className='btn rounded-circle p-0' style={{ cursor: "pointer" }}
                       onClick={() => {
                         // handle here
@@ -85,7 +103,7 @@ export default function TrackBookings() {
                     >
                       <i title='update' className="bi bi-pencil text-danger fs-5"></i>
                     </div>
-                  </td>
+                  </td> */}
                 </tr>
               ))}
             </tbody>
