@@ -7,7 +7,7 @@ const TicketTrip = ({ ticketDetails }) => {
 
   return (
     <div>
-      <div className="w-screen flex items-center justify-center p-10">
+      <div className="w-screen flex items-center justify-center ">
         <div className="max-w-2/3 w-2/3 border border-slate-400 bg-white  rounded-lg overflow-hidden shadow-lg">
           <div className="flex flex-row items-baseline flex-nowrap bg-slate-100 p-2">
             <h1 className="ml-2 uppercase font-bold text-gray-500">departure</h1>

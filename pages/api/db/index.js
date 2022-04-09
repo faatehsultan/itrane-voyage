@@ -1,10 +1,10 @@
 import mysql from "serverless-mysql"
 const db = mysql({
   config: {
-    host: "busapp.ceejwqscaujr.eu-west-3.rds.amazonaws.com",
+    host: process.env.DB_HOST,
     port: "3306",
-    user: "",
-    password: "",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     database: "bus_app"
   }
 })

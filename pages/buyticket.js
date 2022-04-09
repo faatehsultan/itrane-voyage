@@ -32,12 +32,12 @@ const Buyticket = () => {
 
   return (
     <div>
-      <Navbar />
+      
       <TopTripBanner srcProp={router.query.src} destProp={router.query.dest} />
       <Steps />
       {tickets && tickets.length > 0 && <Ticket ticketList={tickets} />}
 
-      <Footer />
+      
     </div>
   )
 }

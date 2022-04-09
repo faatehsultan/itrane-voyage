@@ -7,15 +7,15 @@ import Desti from 'components/about/destinations'
 const faq = () => {
   return (
     <div>
-      <Navi/>
       
-      <div className="m-12 py-12 pb-12">
+      
+      <div className="">
 
       </div>
  
       <Desti/>
 
-      <Footies/>
+      
     </div>
   )
 }

@@ -40,7 +40,7 @@ function ChevronDots({
             width: `${((currentStep - 1) / (steps.length - 1)) * 100}%`,
           }}
         >
-          <div className="w-4 h-4 bg-red-800 rounded-full absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2" />
+          <div className="w-4 h-4 bg-white border border-red-600 rounded-full absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2" />
         </div>
       </div>
       <div className="mt-3 relative hidden sm:block">{Steps}</div>

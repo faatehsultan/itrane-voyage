@@ -9,13 +9,13 @@ import TopTripBanner from 'components/toptripbanner'
 const BookingInfo = () => {
   return (
     <div>
-      <Navi />
+     
       <TopTripBanner />
       <Steps />
       <div className='flex justify-center items-center py-20 m-12'>
         <Userinfotest  />
       </div>
-      <Footies />
+      
     </div>
   )
 }

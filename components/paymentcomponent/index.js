@@ -14,14 +14,14 @@ export default function PaymentComponent({ handleConfirmTicket, formRef }) {
     <div className='flex justify-end content-center gap-5 text-left'>
       <button
         type='button'
-        className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
+        className='hover:bg-white border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md py-2 px-4'
         onClick={() => {
           handleConfirmTicket("cash", formRef)
         }}
       >Pay Via Cash and Confirm</button>
       <button
         type='button'
-        className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
+        className='hover:bg-white border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md py-2 px-4'
         onClick={() => {
           setShowModal(true);
         }}
